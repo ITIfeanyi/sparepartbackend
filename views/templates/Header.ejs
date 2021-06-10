@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <section class="header-section">
+        <div class="hamburger-logo-container">
+          <div class="hamburger-icon nav-icon">
+            <div class="hamburger-main">
+              <span class="hamburger"><i class="fas fa-hamburger"></i></span>
+            </div>
+          </div>
+          <div class="header-logo">
+            <div class="header-logo-text">B-Mart</div>
+          </div>
+        </div>
+        <div class="sign-up-info sign-up-header">
+          <div class="sign-up-text">
+            <span class="user-account-icon" id="account_icon"
+              ><i class="fas fa-user-circle"></i
+            ></span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section
+      class="sign-up-sign-in-box account_container"
+      id="account_container"
+    >
+      <div
+        class="sign-up-sign-in-box-mask account_mask"
+        id="account_mask"
+      ></div>
+      <section class="sign-up-sign-in-box-subcontainer" id="signin_signup_box">
+        <div class="sign-in-container">
+          <div class="sign-in-google">
+            <span class="google_images">
+              <img
+                class="google_logo"
+                src="/images/Google__G__Logo.svg.png"
+                alt=""
+              />
+            </span>
+            <span> Sign in via Google </span>
+          </div>
+
+          <div class="normal-sign-in">
+            <span class="google_images">
+              <img
+                class="google_logo"
+                src="/images/Gmail-Logo.wine.png"
+                alt=""
+              />
+            </span>
+            <span>Sign in via E-mail</span>
+          </div>
+
+          <div class="sign-up-container">
+            <span class="google_images"> </span>
+            <a href="/sign-up">Don't ve' an account?</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      const account_icon = document.getElementById("account_icon");
+      const account_mask = document.getElementById("account_mask");
+      const signin_signup_box = document.getElementById("signin_signup_box");
+      account_icon.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        const account_mask = document.querySelector(".account_mask");
+        account_mask.classList.add("is-mask-open");
+        signin_signup_box.classList.add("sign_up_in_box");
+      });
+
+      account_mask.addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        account_mask.classList.remove("is-mask-open");
+        signin_signup_box.classList.remove("sign_up_in_box");
+      });
+    </script>
+  </body>
+</html>
