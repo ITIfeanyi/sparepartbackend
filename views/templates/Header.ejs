@@ -27,13 +27,18 @@
             <div class="header-logo-text">B-Mart</div>
           </div>
         </div>
-        <div class="sign-up-info sign-up-header">
-          <div class="sign-up-text">
-            <span class="user-account-icon" id="account_icon"
-              ><i class="fas fa-user-circle"></i
-            ></span>
+        <% if(!username) {%> 
+          <div class="sign-up-info sign-up-header">
+            <div class="sign-up-text">
+              <span class="user-account-icon" id="account_icon"
+                ><i class="fas fa-user-circle"></i
+              ></span>
+            </div>
           </div>
-        </div>
+        <% }else {%> 
+          <div> <%= username %>  </div>
+          <% } %> 
+       
       </section>
     </header>
 
@@ -48,14 +53,16 @@
       <section class="sign-up-sign-in-box-subcontainer" id="signin_signup_box">
         <div class="sign-in-container">
           <div class="sign-in-google">
-            <span class="google_images">
-              <img
-                class="google_logo"
-                src="/images/Google__G__Logo.svg.png"
-                alt=""
-              />
-            </span>
-            <span> Sign in via Google </span>
+            <a href="/auth/google">
+              <span class="google_images">
+                <img
+                  class="google_logo"
+                  src="/images/Google__G__Logo.svg.png"
+                  alt=""
+                />
+              </span>
+              <span> Sign in via Google </span>
+            </a>
           </div>
 
           <div class="normal-sign-in">

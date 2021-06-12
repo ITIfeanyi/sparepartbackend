@@ -20,10 +20,14 @@
   },
   "homepage": "https://github.com/ITIfeanyi/sparepartbackend#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.12.12"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.13",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
