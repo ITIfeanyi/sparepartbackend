@@ -1,4 +1,3 @@
-const { checkUserExistInCookie } = require("../auth/loginCookieToken");
 const jwt = require("jsonwebtoken");
 const User = require("../models/Userschema");
 
