@@ -27,18 +27,17 @@
             <div class="header-logo-text">B-Mart</div>
           </div>
         </div>
-        <% if(!username) {%> 
-          <div class="sign-up-info sign-up-header">
-            <div class="sign-up-text">
-              <span class="user-account-icon" id="account_icon"
-                ><i class="fas fa-user-circle"></i
-              ></span>
-            </div>
+        <% if(!username) {%>
+        <div class="sign-up-info sign-up-header">
+          <div class="sign-up-text">
+            <span class="user-account-icon" id="account_icon"
+              ><i class="fas fa-user-circle"></i
+            ></span>
           </div>
-        <% }else {%> 
-          <div> <%= username %>  </div>
-          <% } %> 
-       
+        </div>
+        <% }else {%>
+        <div><%= username %></div>
+        <% } %>
       </section>
     </header>
 
@@ -73,12 +72,18 @@
                 alt=""
               />
             </span>
-            <span>Sign in via E-mail</span>
+            <span
+              ><a href="https://pure-depths-31131.herokuapp.com/login"
+                >Sign in via E-mail</a
+              ></span
+            >
           </div>
 
           <div class="sign-up-container">
             <span class="google_images"> </span>
-            <a href="/sign-up">Don't ve' an account?</a>
+            <a href="https://pure-depths-31131.herokuapp.com/register"
+              >Don't ve' an account?</a
+            >
           </div>
         </div>
       </section>

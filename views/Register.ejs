@@ -1,0 +1,55 @@
+<%- include("templates/PartialHeader") %>
+
+<main class="l-r-container">
+  <section class="l-r-sub-container">
+    <p><%- include("partials/message") %></p>
+    <div class="form-container">
+      <h2>Register</h2>
+      <form action="/register" method="POST" class="l-r-form">
+        <div class="l-r-form-subcontainer">
+          <input
+            class="l-r-form-input"
+            type="text"
+            name="firstName"
+            id="firstname"
+            autofocus="true"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="l-r-form-subcontainer">
+          <input
+            class="l-r-form-input"
+            type="text"
+            name="lastName"
+            id="lastname"
+            autofocus="true"
+            placeholder="Last Name"
+          />
+        </div>
+
+        <div class="l-r-form-subcontainer">
+          <input
+            class="l-r-form-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Email"
+          />
+        </div>
+        <div class="l-r-form-subcontainer">
+          <input
+            class="l-r-form-input"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-submit">
+          <button class="form-submit" type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
