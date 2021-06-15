@@ -8,24 +8,6 @@ module.exports = {
     });
   },
 
-  checkUserExistInCookie: (cookie) => {
-    if (cookie === undefined) {
-      return false;
-    } else {
-      jwt.verify(cookie, process.env.JWTSECRET, async (err, userId) => {
-        if (err) {
-          return false;
-        }
-        if (!userId) {
-          return false;
-        } else {
-          const user = await User.findById(userId.userId);
-          return user.firstName;
-        }
-      });
-    }
-  },
-
   redirectIfCookieExist: async (req, res, next) => {
     try {
       const cookie = req.cookies.B_Mart_user;
